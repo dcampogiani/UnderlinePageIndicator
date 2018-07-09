@@ -7,6 +7,25 @@ This indicator will underline each tab text with, morphing its size while scroll
 
 ## How to use
 
+Add **JitPack** repository to your `build.gradle` file
+
+``` gradle
+allprojects {
+	repositories {
+	     ...
+	     maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+Add the Dependency 
+
+``` gradle
+dependencies {
+    implementation "com.github.dcampogiani:UnderlinePageIndicator:0.0.1"
+}
+```
+
 Add TabLayout and UnderlinePageIndicator to XML:
 
 ```xml
