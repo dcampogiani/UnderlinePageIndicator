@@ -2,7 +2,7 @@
 
 ![Demo](https://github.com/dcampogiani/UnderlinePageIndicator/blob/master/demo.gif?raw=true)
 
-This indicator will underline each tab text with, morphing its size while scrolling
+This indicator will underline each tab text, morphing its size while scrolling
 
 
 ## How to use
