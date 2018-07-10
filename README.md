@@ -1,4 +1,4 @@
-# Underline Page Indicator
+# Underline Page Indicator [![Release]( https://jitpack.io/v/dcampogiani/UnderlinePageIndicator.svg )]( https://jitpack.io/#dcampogiani/UnderlinePageIndicator ) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Underline%20Page%20Indicator-green.svg?style=flat )]( https://android-arsenal.com/details/1/7027 )
 
 ![Demo](https://github.com/dcampogiani/UnderlinePageIndicator/blob/master/demo.gif?raw=true)
 
