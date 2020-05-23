@@ -1,12 +1,11 @@
 package com.danielecampogiani.underlinepageindicator
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_item.*
-
 
 private const val ITEM = "item"
 
@@ -18,14 +17,13 @@ private const val ITEM = "item"
  */
 class ItemFragment : Fragment() {
     private val name: String by lazy {
-        arguments!!.getParcelable<Item>(ITEM).name
+        arguments!!.getParcelable<Item>(ITEM)!!.name
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_item, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,10 +35,10 @@ class ItemFragment : Fragment() {
         operator fun invoke(item: Item) = newInstance(item)
 
         fun newInstance(item: Item) =
-                ItemFragment().apply {
-                    arguments = Bundle(1).apply {
-                        putParcelable(ITEM, item)
-                    }
+            ItemFragment().apply {
+                arguments = Bundle(1).apply {
+                    putParcelable(ITEM, item)
                 }
+            }
     }
 }

@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Item(val name: String) : Parcelable {
-    constructor(parcel: Parcel) : this(parcel.readString())
+    constructor(parcel: Parcel) : this(parcel.readString().orEmpty())
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)

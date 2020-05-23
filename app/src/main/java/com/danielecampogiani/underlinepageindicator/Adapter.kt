@@ -1,12 +1,11 @@
 package com.danielecampogiani.underlinepageindicator
 
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentStatePagerAdapter
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
 
 class Adapter(
-        private val data: List<Item>,
-        fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
-
+    private val data: List<Item>,
+    fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
     override fun getItem(position: Int) = ItemFragment(data[position])
 

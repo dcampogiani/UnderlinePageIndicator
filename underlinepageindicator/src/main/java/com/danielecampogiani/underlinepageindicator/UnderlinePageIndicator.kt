@@ -3,13 +3,13 @@ package com.danielecampogiani.underlinepageindicator
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.support.design.widget.TabLayout
-import android.support.v4.view.ViewPager
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.viewpager.widget.ViewPager
+import com.danielecampogiani.underlinepageindicatorLib.R
+import com.google.android.material.tabs.TabLayout
 
 class UnderlinePageIndicator @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : View(context, attrs, defStyle), ViewPager.OnPageChangeListener {
 
@@ -114,13 +114,13 @@ class UnderlinePageIndicator @JvmOverloads constructor(context: Context, attrs: 
             val childCount = tabStrip.childCount
 
             (0 until childCount)
-                    .mapNotNull {
-                        val tabView = tabStrip.getChildAt(it) as? ViewGroup
-                                ?: return@mapNotNull null
-                        val tabChildrenCount = tabView.childCount
-                        tabView.getChildAt(tabChildrenCount - 1)
-                    }
-                    .forEach { tabTexts.add(it) }
+                .mapNotNull {
+                    val tabView = tabStrip.getChildAt(it) as? ViewGroup
+                        ?: return@mapNotNull null
+                    val tabChildrenCount = tabView.childCount
+                    tabView.getChildAt(tabChildrenCount - 1)
+                }
+                .forEach { tabTexts.add(it) }
         }
         setViewPager(viewPager)
 
