@@ -22,7 +22,7 @@ Add the Dependency
 
 ``` gradle
 dependencies {
-    implementation "com.github.dcampogiani:underlinepageindicator:0.0.1"
+    implementation "com.github.dcampogiani:underlinepageindicator:0.0.2"
 }
 ```
 
