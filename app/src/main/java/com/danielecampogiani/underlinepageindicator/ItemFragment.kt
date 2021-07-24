@@ -17,7 +17,7 @@ private const val ITEM = "item"
  */
 class ItemFragment : Fragment() {
     private val name: String by lazy {
-        arguments!!.getParcelable<Item>(ITEM)!!.name
+        requireArguments().getParcelable<Item>(ITEM)!!.name
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
